@@ -1,6 +1,5 @@
 use rltk::{GameState, Rltk, RGB, VirtualKeyCode};
-use specs::prelude::*;
-use std::cmp::{max, min};
+use specs::prelude::*; use std::cmp::{max, min};
 use specs_derive::Component;
 
 #[derive(Component)]
@@ -117,7 +116,7 @@ fn main() -> rltk::BError {
             .create_entity()
             .with(Position { x: i * 7, y: 20 })
             .with(Renderable {
-                glyph: rltk::to_cp437('@'),
+                glyph: rltk::to_cp437('☺'),
                 fg: RGB::named(rltk::RED),
                 bg: RGB::named(rltk::BLACK),
             })
